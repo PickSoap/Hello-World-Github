@@ -1,17 +1,16 @@
-name: Greeting from Wu Chun Yat
-on: push
-
-
-jobs:
- my-job:
-  name: My Job
-  runs-on: ubuntu-latest
-  steps:
-  - name: Print a greeting
-  env:
-   Y_VAR: Hi there! My name is
-   FIRST_NAME: Wu
-   MIDDLE_NAME: Chun
-   LAST_NAME: Yat
-  run: |
-   echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+--- 
+jobs: 
+  my-job: 
+    env: 
+      FIRST_NAME: Wu
+      LAST_NAME: Yat
+      MIDDLE_NAME: Chun
+      Y_VAR: "Hi there! My name is"
+    name: "My Job"
+    run: "echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.\n"
+    runs-on: ubuntu-latest
+    steps: 
+      - 
+        name: "Print a greeting"
+name: "Greeting from Wu Chun Yat"
+true: push
